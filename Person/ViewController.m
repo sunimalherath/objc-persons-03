@@ -6,8 +6,12 @@
 //
 
 #import "ViewController.h"
+#import "Employee.h"
 
 @interface ViewController ()
+{
+    BOOL iSAccessible;
+}
 
 @end
 
@@ -15,7 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    Employee *emp1 = [[Employee alloc] init];
+    emp1.firstName = @"John";
+    [emp1 setLastName:@"Doe"];
+    iSAccessible = NO; // this is ViewController's instance variable (ivar)
 }
 
 
